@@ -10,15 +10,8 @@ files:
   testConfigs: 
    - playwright.config.ts
   testFiles:
-   - tests/sale.spec.ts
-vus: 2
+   - tests/saleparam.spec.ts
+vus: 1
 regions:
   - loadzone: us-east-1
-    percent: 50
-  - loadzone: us-west-1
-    percent: 50
-env:
-  VU1_USERNAME: perftestone
-  VU1_PASSWORD: automation0325
-  VU2_USERNAME: perftesttwo
-  VU2_PASSWORD: automation0325
+    percent: 100

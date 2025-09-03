@@ -73,6 +73,18 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
+
+    {
+      name: 'BrowserStack',
+      use: {
+        browserName: 'chromium',
+        viewport: { width: 1280, height: 720 },
+        launchOptions: {
+          headless: true,
+        },
+        baseURL: 'https://qa-external-alb.adp-qa.aws.domgencloud.net/',
+      },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
