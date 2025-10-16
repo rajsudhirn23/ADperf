@@ -1,7 +1,7 @@
 userName: rajsudhirrajsudh_nFHQJ6
 accessKey: qeU3qNS1TM5p8Jmaa8Rd
-projectName: Default Project
-testName: ADP Playwright Load Test
+projectName: MyAccount Project
+testName: US MyAccount Playwright Load Test
 testType: Playwright
 language: nodejs
 files: 
@@ -10,8 +10,8 @@ files:
   testConfigs: 
    - playwright.config.ts
   testFiles:
-   - tests/saleparam.spec.ts
-vus: 1
+   - tests/myacc-parallel.spec.ts
+vus: 10
 regions:
   - loadzone: us-east-1
     percent: 100
