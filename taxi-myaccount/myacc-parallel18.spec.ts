@@ -6,14 +6,13 @@ test.use({
   }
 });
 
-test('test user 1', async ({ page }) => {
+test('test user 18', async ({ page }) => {
   await page.goto('https://whirlpool.b2bcustexp-qa.tmp.domgensandbox.com/myaccount');
-  //await page.locator('.onetrust-pc-dark-filter').click();
   const acceptButton = page.getByRole('button', { name: 'Accept' });
   if (await acceptButton.waitFor({ state: 'visible', timeout: 5000 }).then(() => true).catch(() => false)) {
     await acceptButton.click();
   }
-   await page.getByRole('textbox', { name: 'Email' }).fill('perfdngtest+72898@gmail.com');
+   await page.getByRole('textbox', { name: 'Email' }).fill('perfdngtest+72926@gmail.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('Test1234');
   await page.getByRole('button', { name: 'Login right-chevron' }).click();
   const hiHeading = page.getByRole('heading', { name: 'Hi' });
@@ -36,6 +35,7 @@ test('test user 1', async ({ page }) => {
   if (await userHeading.waitFor({ state: 'visible', timeout: 15000 }).then(() => true).catch(() => false)) {
     await userHeading.click();
   }
+  await page.waitForTimeout(1000);
   await page.getByRole('button', { name: 'Log out' }).click();
   await page.waitForTimeout(1000);
       // Check if Email textbox is visible within 5 seconds
